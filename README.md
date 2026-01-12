@@ -147,7 +147,7 @@ console.log(result); // Output: "Anton"
      var result = await Findall("<title>(.*?)<title>", input);
      console.log(result); // Output: "Follow github antonthomzz (https://github.com/Antonthomzz)"
   })('<title>Follow github antonthomzz (https://github.com/Antonthomzz)<title>');
-```
+  ```
 
 ### Error Handling
 
