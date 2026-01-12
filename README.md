@@ -1,8 +1,10 @@
 # Travex
 <div align="center">
+
 [![NPM Version](https://img.shields.io/npm/v/travex?color=brightgreen&label=Version&style=for-the-badge)](https://www.npmjs.com/package/travex "NPM Package")
 [![NPM Downloads](https://img.shields.io/npm/dm/travex?label=Downloads&style=for-the-badge)](https://www.npmjs.com/package/travex "Downloads")
 [![Donate](https://img.shields.io/badge/-Donate-red.svg?logo=githubsponsors&labelColor=555555&style=for-the-badge)](https://github.com/sponsors/Antonthomzz "Support Development")
+
 </div>
 
 ## Features
@@ -142,10 +144,10 @@ console.log(result); // Output: "Anton"
   import { Findall } from 'travex';
 
   (async (input) => {
-   var result = await Findall("<title>(.*?)<title>", input);
-   console.log(result); // Output: "Follow github antonthomzz (https://github.com/Antonthomzz)"
-})(`<title>Follow github antonthomzz (https://github.com/Antonthomzz)<title>`);
-  ```
+     var result = await Findall("<title>(.*?)<title>", input);
+     console.log(result); // Output: "Follow github antonthomzz (https://github.com/Antonthomzz)"
+  })('<title>Follow github antonthomzz (https://github.com/Antonthomzz)<title>');
+```
 
 ### Error Handling
 
