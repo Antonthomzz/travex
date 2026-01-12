@@ -1,0 +1,32 @@
+{
+   "name": "travex",
+   "version": "0.0.4",
+   "description": "Traversal and search utility using regular expressions for structured data",
+   "type": "module",
+   "main": "init.js",
+   "author": {
+      "name": "Anton Thomzz",
+      "email": "antonthomzz@gmail.com",
+      "url": "https://github.com/Antonthomzz"
+   },
+   "license": "MIT",
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/Antonthomzz/travex.git"
+   },
+   "bugs": {
+      "url": "https://github.com/Antonthomzz/travex/issues"
+   },
+   "homepage": "https://github.com/Antonthomzz/travex#README.md",
+   "keywords": [
+      "traverse",
+      "traversal",
+      "regex",
+      "search",
+      "object-traversal",
+      "data-structure"
+   ],
+   "engines": {
+      "node": ">=18"
+   }
+}
