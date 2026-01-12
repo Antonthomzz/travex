@@ -1,8 +1,8 @@
 # Travex
 <div align="center">
 
-[![NPM Version](https://img.shields.io/npm/v/travex?color=brightgreen&label=Version&style=for-the-badge)](https://www.npmjs.com/package/travex "NPM Package")
-[![NPM Downloads](https://img.shields.io/npm/dm/travex?label=Downloads&style=for-the-badge)](https://www.npmjs.com/package/travex "Downloads")
+[![NPM Version](https://img.shields.io/npm/v/@antonthomzz/travex?color=brightgreen&label=Version&style=for-the-badge)](https://www.npmjs.com/package/@antonthomzz/travex "NPM Package")
+[![NPM Downloads](https://img.shields.io/npm/dm/@antonthomzz/travex?label=Downloads&style=for-the-badge)](https://www.npmjs.com/package/@antonthomzz/travex "Downloads")
 [![Donate](https://img.shields.io/badge/-Donate-red.svg?logo=githubsponsors&labelColor=555555&style=for-the-badge)](https://github.com/sponsors/Antonthomzz "Support Development")
 
 </div>
@@ -30,12 +30,12 @@
 3. Install dependencies (if any) by running:
 
 ```bash
-npm install travex
+npm install @antonthomzz/travex@alpha
 ```
 4. Include the traversal tool in your project:
 
 ```javascript
-import { (Traverse|Findall|Meta|Decode) } from 'travex';
+import { (Traverse|Findall|Meta|Decode) } from '@antonthomzz/travex';
 ```
 
 ### Basic Setup
@@ -43,7 +43,7 @@ import { (Traverse|Findall|Meta|Decode) } from 'travex';
 Set up the tool by defining the input data and traversal path:
 
 ```javascript
-import { Traverse } from 'travex';
+import { Traverse } from '@antonthomzz/travex';
 
 var result = Traverse(".value", {"data":{"name":{"value":"Anton"}}})
 console.log(result); // Output: "Anton"
@@ -55,7 +55,7 @@ console.log(result); // Output: "Anton"
   - Example:
 
     ```javascript
-    import { Traverse } from 'travex';
+    import { Traverse } from '@antonthomzz/travex';
 
     var result = Traverse('.anton', {}, { default: 'Not found' });
     console.log(result); // Output: "Not found"
@@ -64,7 +64,7 @@ console.log(result); // Output: "Anton"
   - Example:
 
     ```javascript
-    import { Traverse } from 'travex';
+    import { Traverse } from '@antonthomzz/travex';
 
     var result = Traverse('anton', {"data":{"name":"Anton"}}, { fallback: ['tes1', 'data>name'] });
     console.log(result); // Output: "Anton"
@@ -73,7 +73,7 @@ console.log(result); // Output: "Anton"
   - Example:
 
     ```javascript
-    import { Traverse } from 'travex';
+    import { Traverse } from '@antonthomzz/travex';
 
     var result = Traverse('list', {"list":[[1,2],[3,4]]}, { flatten: true });
     console.log(result); // Output: [1, 2, 3, 4]
@@ -82,7 +82,7 @@ console.log(result); // Output: "Anton"
   - Example:
 
     ```javascript
-    import { Traverse } from 'travex';
+    import { Traverse } from '@antonthomzz/travex';
 
     var result = Traverse('items', {"items":[1,1,2,2,3]}, { unique: true });
     console.log(result); // Output: [1, 2, 3]
@@ -91,7 +91,7 @@ console.log(result); // Output: "Anton"
   - Example:
 
     ```javascript
-    import { Traverse } from 'travex';
+    import { Traverse } from '@antonthomzz/travex';
 
     var result = Traverse('numbers', {"numbers":[1,2,3,4,5]}, { limit: 3 });
     console.log(result); // Output: [1, 2, 3]
@@ -101,7 +101,7 @@ console.log(result); // Output: "Anton"
   - Example:
 
     ```javascript
-    import { Traverse } from 'travex';
+    import { Traverse } from '@antonthomzz/travex';
 
     Traverse('data>value', {"data":{"value":42}}, {
        debug: true
@@ -111,7 +111,7 @@ console.log(result); // Output: "Anton"
   - Example:
 
     ```javascript
-    import { Traverse } from 'travex';
+    import { Traverse } from '@antonthomzz/travex';
 
     var result = Traverse("data", {"data":[{"name":"Anton","age":20},{"name":"Tiara","age":17}]}, {
        find: ["name", "age:20"]
@@ -122,7 +122,7 @@ console.log(result); // Output: "Anton"
   - Example:
 
     ```javascript
-    import { Traverse } from 'travex';
+    import { Traverse } from '@antonthomzz/travex';
 
     var result = Traverse("num", {"num": 10}, { filter: p => p * 10 });
     console.log(result); // Output: 100
@@ -131,7 +131,7 @@ console.log(result); // Output: "Anton"
   - Example:
 
     ```javascript
-    import { Traverse } from 'travex';
+    import { Traverse } from '@antonthomzz/travex';
 
     var result = Traverse("items", {"items":["apple","banana","orange"]}, { group: 2 });
     console.log(result); // Output: banana
@@ -141,7 +141,7 @@ console.log(result); // Output: "Anton"
 
 - `search_regex`: search data based on `RegExp`
   ```javascript
-  import { Findall } from 'travex';
+  import { Findall } from '@antonthomzz/travex';
 
   (async (input) => {
      var result = await Findall("<title>(.*?)<title>", input);
